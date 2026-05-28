@@ -1,0 +1,61 @@
+{
+  "name": "claude-context-bar",
+  "displayName": "Claude Context Bar",
+  "description": "Shows Claude Code model and context usage in the VS Code status bar",
+  "version": "0.1.0",
+  "publisher": "local",
+  "engines": { "vscode": "^1.85.0" },
+  "categories": ["Other"],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Claude Context Bar",
+      "properties": {
+        "claudeContextBar.modelColor": {
+          "type": "string",
+          "default": "textLink.foreground",
+          "description": "Color of the model name text. Accepts a hex code (e.g. #4FC3F7) or a VS Code ThemeColor id (e.g. textLink.foreground). Leave empty to use the default status bar foreground."
+        },
+        "claudeContextBar.warningThreshold": {
+          "type": "number",
+          "default": 50,
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Usage percentage at which the bar/percentage switches to the warning color."
+        },
+        "claudeContextBar.dangerThreshold": {
+          "type": "number",
+          "default": 80,
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Usage percentage at which the bar/percentage switches to the danger color."
+        },
+        "claudeContextBar.normalColor": {
+          "type": "string",
+          "default": "statusBar.debuggingForeground",
+          "description": "Color used below the warning threshold. Hex code or ThemeColor id."
+        },
+        "claudeContextBar.warningColor": {
+          "type": "string",
+          "default": "statusBarItem.warningForeground",
+          "description": "Color used at/above the warning threshold. Hex code or ThemeColor id."
+        },
+        "claudeContextBar.dangerColor": {
+          "type": "string",
+          "default": "statusBarItem.errorBackground",
+          "description": "Color used at/above the danger threshold. Hex code or ThemeColor id."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.3.0"
+  }
+}

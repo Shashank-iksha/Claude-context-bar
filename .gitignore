@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Build output
+out/
+dist/
+build/
+
+# Packaged extension
+*.vsix
+
+# Logs / caches / temp
+*.log
+*.tmp
+*.cache
+
+# OS / editor
+.DS_Store
+.claude/
+
+# Local Claude Code notes (remove this line if you want to commit CLAUDE.md)
+CLAUDE.md
