@@ -2,6 +2,11 @@
 
 VS Code extension that shows the current Claude Code model and token context usage in the status bar — model name, a color-coded progress bar, and `used / max` token count, refreshed every 5 seconds.
 
+
+<img width="593" height="158" alt="image" src="https://github.com/user-attachments/assets/d96ec70f-d040-4964-b29a-ba2abb64e06f" />
+
+<img width="1508" height="915" alt="image" src="https://github.com/user-attachments/assets/1a16aa33-e60f-4d22-b0ec-c7a06948b121" />
+
 ## Install
 
 ```bash
