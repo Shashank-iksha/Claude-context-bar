@@ -47,7 +47,7 @@ function parseTranscript(transcriptPath: string): SessionInfo | null {
     const lines = fs.readFileSync(transcriptPath, 'utf8').trim().split('\n');
     let model = '';
     let inputTokens = 0;
-    let contextWindowSize = 200000;
+    let contextWindowSize = 1000000;
 
     for (const line of lines) {
       if (!line.trim()) continue;
